@@ -42,11 +42,6 @@ class NavbarPage extends Component {
           </MDBNavbarBrand>
           <MDBNavbarToggler onClick={this.toggleCollapse} />
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-            <MDBNavbarNav left>
-              <MDBNavItem >
-                <MDBNavLink to="#!">Home</MDBNavLink>
-              </MDBNavItem>
-            </MDBNavbarNav>
             <MDBNavbarNav right>
               <MDBNavItem>
                 <MDBNavLink className="waves-effect waves-light" to="#!">

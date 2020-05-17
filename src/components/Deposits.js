@@ -28,7 +28,7 @@ export default function Deposits(props) {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Title >SELECT STOCK TO VIEW</Title>
+      <Title >SELECT STOCK</Title>
       {stocks.map((value,i) => {
         return <Button key={i} onClick={() => changeStockName(value)} color="primary">{value}</Button>
       })}

@@ -54,7 +54,7 @@ export default function Orders(props) {
       <Table size="small">
         <TableHead>
           <TableRow>
-            <TableCell>Stock Name</TableCell>
+            <TableCell>Stock Ticker</TableCell>
             <TableCell>Volume</TableCell>
             <TableCell>Max Value</TableCell>
             <TableCell>Min Value</TableCell>

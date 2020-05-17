@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^7.1.2",
     "bootstrap": "^4.5.0",
     "clsx": "^1.1.0",
+    "gh-pages": "^2.2.0",
     "jss": "^10.1.1",
     "material-ui-icons": "^1.0.0-beta.36",
     "mdbreact": "^4.26.1",

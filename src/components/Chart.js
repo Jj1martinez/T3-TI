@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { useTheme } from '@material-ui/core/styles';
-import { LineChart, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
+import { LineChart,Tooltip, Line, XAxis, YAxis, Label, ResponsiveContainer } from 'recharts';
 import Title from './Title';
 
 // Generate Sales Data
@@ -29,7 +29,6 @@ export default function Chart(props) {
       data.push(createData(time,stock.value))
     })
   }
- 
   const [value, setValue] = useState(0); //
   useEffect(() => {
     const interval = setInterval(() => {
@@ -60,7 +59,8 @@ export default function Chart(props) {
               Value
             </Label>
           </YAxis>
-          <Line type="monotone" dataKey="amount" stroke={theme.palette.primary.main} dot={false} />
+          <Tooltip />
+          <Line type="monotone" dataKey="amount" stroke={theme.palette.primary.main} dot={true} />
         </LineChart>
       </ResponsiveContainer>
     </React.Fragment>

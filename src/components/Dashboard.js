@@ -23,6 +23,7 @@ import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
 import Exchange from './Exchange';
+import Info from './Info';
 import NavBar from './navbar';
 import socket from '../socket-con/config';
 
@@ -229,13 +230,19 @@ export default function Dashboard() {
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
             {/* Chart */}
-            <Grid item xs={12} md={8} lg={9}>
+            <Grid item xs={12} md={8} lg={8}>
               <Paper className={fixedHeightPaper}>
                 <Chart stock={stockAct} stocksDict={stocks} />
               </Paper>
             </Grid>
             {/* Recent Deposits */}
-            <Grid item xs={12} md={4} lg={3}>
+            <Grid item xs={12} md={4} lg={2}>
+              <Paper className={fixedHeightPaper}>
+                <Info stock={stockAct}
+                stocksNames= {stocksNames}/>
+              </Paper>
+            </Grid>
+            <Grid item xs={12} md={4} lg={2}>
               <Paper className={fixedHeightPaper}>
                 <Deposits onChangeStock= {onChangeStock} stocksNames= {stocksNames}/>
               </Paper>
