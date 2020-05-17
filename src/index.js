@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
+import NavbarPage from './components/navbar';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
+import 'bootstrap-css-only/css/bootstrap.min.css'; 
+import 'mdbreact/dist/css/mdb.css';
+import Dashboard from './components/Dashboard';
+import {socket} from "./socket-con/config.js";
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <NavbarPage/>
+    <Dashboard/>
   </React.StrictMode>,
   document.getElementById('root')
 );
